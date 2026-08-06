@@ -1,0 +1,12 @@
+skills:
+  frontend-product-design:
+    path: frontend/product-design
+    description: Product-first frontend design rules
+
+  frontend-engineering:
+    path: frontend/engineering
+    description: React Next.js frontend engineering rules
+
+  frontend-review:
+    path: frontend/review
+    description: Frontend quality review rules
