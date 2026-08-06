@@ -1,0 +1,17 @@
+{
+  "name": "@bilbilmyc/agent-skills",
+  "version": "0.1.0",
+  "description": "Install and manage Codex agent skills",
+  "type": "module",
+  "bin": {
+    "agent-skills": "bin/agent-skills.js"
+  },
+  "files": [
+    "bin",
+    "frontend",
+    "registry.yaml"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
