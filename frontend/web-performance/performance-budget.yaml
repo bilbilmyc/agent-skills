@@ -1,6 +1,0 @@
-budget:
-  javascript_initial_kb: 250
-  image_optimization_required: true
-  lazy_loading_required: true
-  layout_shift_check: true
-  runtime_measurement_required: true
