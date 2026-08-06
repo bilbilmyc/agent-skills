@@ -1,0 +1,14 @@
+layout:
+  principle: fluid_first
+  fixed_canvas: false
+
+rules:
+  - use_relative_units
+  - use_container_constraints
+  - avoid_fixed_page_width
+  - test_multiple_viewports
+  - preserve_content_hierarchy
+
+breakpoints:
+  strategy: content_driven
+  avoid_device_specific_hardcoding: true
