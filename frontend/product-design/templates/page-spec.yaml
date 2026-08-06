@@ -1,0 +1,19 @@
+page:
+  name: ""
+  purpose: ""
+  user_action: ""
+
+layout:
+  type: "fluid"
+  responsive: true
+  fixed_canvas: false
+
+sections:
+  - name: ""
+    purpose: ""
+
+constraints:
+  avoid:
+    - dashboard_default
+    - fixed_dimensions
+    - duplicated_titles
