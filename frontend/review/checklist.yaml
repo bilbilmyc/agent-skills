@@ -1,0 +1,16 @@
+product:
+  - correct_product_type: true
+  - no_accidental_admin_dashboard: true
+
+layout:
+  - responsive: true
+  - fluid_sizing: true
+  - no_fixed_canvas: true
+
+ui:
+  - consistent_tokens: true
+  - clear_typography: true
+
+engineering:
+  - maintainable_components: true
+  - reasonable_state_management: true
