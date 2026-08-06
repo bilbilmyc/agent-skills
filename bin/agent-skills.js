@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { mkdir, symlink, access } from 'node:fs/promises';
+import { mkdir, symlink, rm, access } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -13,28 +13,48 @@ const skills = {
   'frontend-review': 'frontend/review'
 };
 
+async function exists(path) {
+  try {
+    await access(path);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 async function install() {
   await mkdir(target, { recursive: true });
 
   for (const [name, source] of Object.entries(skills)) {
     const dest = resolve(target, name);
-    try {
-      await access(dest);
+
+    if (await exists(dest)) {
       console.log(`skip ${name}`);
       continue;
-    } catch {}
+    }
 
     await symlink(resolve(root, source), dest, 'junction');
     console.log(`installed ${name}`);
   }
 }
 
-const command = process.argv[2];
-
-if (command === 'install' || !command) {
-  await install();
-} else if (command === 'list') {
-  console.log(Object.keys(skills).join('\n'));
-} else {
-  console.log('Usage: agent-skills install | list');
+async function remove() {
+  for (const name of Object.keys(skills)) {
+    const dest = resolve(target, name);
+    if (await exists(dest)) {
+      await rm(dest, { recursive: true, force: true });
+      console.log(`removed ${name}`);
+    }
+  }
 }
+
+function list() {
+  console.log(Object.keys(skills).join('\n'));
+}
+
+const command = process.argv[2] || 'install';
+
+if (command === 'install') await install();
+else if (command === 'remove') await remove();
+else if (command === 'list') list();
+else console.log('Usage: agent-skills install | remove | list');
