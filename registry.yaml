@@ -1,12 +1,17 @@
+version: 1
+
 skills:
   frontend-product-design:
     path: frontend/product-design
+    category: frontend
     description: Product-first frontend design rules
 
   frontend-engineering:
     path: frontend/engineering
-    description: React Next.js frontend engineering rules
+    category: frontend
+    description: React Next.js TypeScript engineering rules
 
   frontend-review:
     path: frontend/review
-    description: Frontend quality review rules
+    category: frontend
+    description: Frontend quality review checklist
