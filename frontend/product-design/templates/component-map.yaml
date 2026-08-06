@@ -1,0 +1,21 @@
+page:
+  name: example-page
+  purpose: describe-user-goal
+
+layout:
+  type: content-first
+  responsive: true
+
+components:
+  - name: navigation
+    required: true
+  - name: primary-content
+    required: true
+  - name: secondary-content
+    required: false
+
+rules:
+  avoid:
+    - dashboard-shell
+    - duplicated-title
+    - unnecessary-sidebar
