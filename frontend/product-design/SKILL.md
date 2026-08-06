@@ -4,23 +4,24 @@
 
 Prevent AI agents from generating generic admin dashboard interfaces when building products.
 
-Use this skill for:
+This skill applies to:
 
 - SaaS products
-- AI tools
+- AI applications
 - content platforms
 - consumer web applications
-- product websites
+- developer tools
 
 ## Core Principle
 
-Design the product experience before writing components.
+Design the product experience before writing code.
 
-Do not start with:
+Never start with:
 
 - React components
 - Tailwind classes
 - UI libraries
+- database models
 
 Start with:
 
@@ -28,10 +29,9 @@ Start with:
 2. User intent
 3. Primary user action
 4. Information hierarchy
+5. Interaction model
 
 ## Product Classification
-
-Identify the product category first.
 
 ### Content Product
 
@@ -48,6 +48,7 @@ Prefer:
 - typography hierarchy
 - reading experience
 - search and discovery
+- content flow
 
 Avoid:
 
@@ -76,6 +77,26 @@ Never use these as default:
 - excessive cards
 - CRUD table as primary experience
 - default shadcn dashboard appearance
+
+## Required Design Artifacts
+
+For medium and large projects create:
+
+- product-spec.md
+- page-wireframe.html
+- component-map.yaml
+- design-review.md
+
+## Skill Resource Types
+
+This skill may contain:
+
+- Markdown rules
+- HTML wireframes
+- YAML design schemas
+- Python validation scripts
+- Shell automation scripts
+- JSON configuration examples
 
 ## Layout Rules
 
@@ -114,9 +135,10 @@ Mobile:
 
 Before coding:
 
-1. Define page purpose
+1. Define product purpose
 2. Define user journey
-3. Create wireframe
-4. Define design tokens
-5. Implement components
-6. Review against this skill
+3. Create HTML wireframe
+4. Create YAML component map
+5. Define design tokens
+6. Implement components
+7. Run visual review
