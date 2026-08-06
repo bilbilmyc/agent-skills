@@ -1,28 +1,46 @@
-# Frontend Review Skill
+# Frontend Review
 
 ## Purpose
 
-Perform final quality review before delivery.
+Review frontend output before delivery.
 
-## Checklist
+## Product Review
 
-Product:
-- correct product type
-- no accidental admin dashboard
-- clear user journey
+Check:
+- Is this the correct product type?
+- Did it accidentally become an admin dashboard?
+- Is the main user action obvious?
 
-Layout:
-- responsive
-- fluid sizing
-- no fixed viewport assumptions
-- mobile adaptation
+## Visual Review
 
-UI:
-- consistent design tokens
+Check:
 - typography hierarchy
-- meaningful components
+- spacing consistency
+- information density
+- component consistency
 
-Engineering:
-- maintainable structure
-- performance considered
-- accessibility considered
+Avoid:
+- duplicated headings
+- card overload
+- generic templates
+
+## Responsive Review
+
+Verify:
+- desktop
+- tablet
+- mobile
+
+Reject:
+- fixed canvas layouts
+- fixed viewport assumptions
+- horizontal overflow
+- desktop-only designs
+
+## Engineering Review
+
+Check:
+- component boundaries
+- rendering strategy
+- performance
+- accessibility
