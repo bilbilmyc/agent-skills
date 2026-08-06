@@ -1,0 +1,16 @@
+breakpoints:
+  mobile:
+    max_width: 640
+  tablet:
+    min_width: 641
+    max_width: 1024
+  desktop:
+    min_width: 1025
+
+rules:
+  mobile:
+    navigation: collapse
+    columns: single
+  desktop:
+    navigation: full
+    columns: multiple
